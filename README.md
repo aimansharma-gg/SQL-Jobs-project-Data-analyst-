@@ -1,95 +1,68 @@
-Data Analytics Jobs in Atlanta – Insights
-This project analyzes the job market for Data Analyst roles located in Atlanta, GA, using 2023 job postings data. It combines SQL-driven data extraction with interactive Power BI visualizations to uncover key insights about demand, salaries, skills, and top-paying companies.
+# 📊 Data Analytics Jobs in Atlanta – Insights
 
-⚠️ Data Source Notice:
-All job posting data used in this project was collected by Luke Barousse in 2023.
-Visit his website and dataset here: lukebarousse.com/sql
+This project explores the Data Analyst job market in **Atlanta, GA** using real-world job posting data from **2023**, originally collected by [Luke Barousse](https://www.lukebarousse.com/sql). The goal was to extract actionable insights about which skills are most in demand, what salaries analysts can expect, and which companies offer the highest-paying opportunities.
 
-📁 Files
-DATA_ANALYTICS_JOBS_IN_ATLANTA_INSITES.pbix: Power BI report file containing dashboards and visualizations based on SQL queries.
+---
 
-SQL scripts: Used to query and join job posting and skills data for analysis.
+## 📁 Files
 
-🔍 Objectives
-Identify the most in-demand technical skills for Data Analyst roles in Atlanta.
+- `DATA_ANALYTICS_JOBS_IN_ATLANTA_INSITES.pbix`: Power BI dashboard file.
+- SQL queries: Used to extract and join data from the job postings database.
 
-Highlight the top-paying job postings and associated skills.
+---
 
-Provide a clear view of salary distributions for Data Analyst roles in Atlanta.
+## 🔍 Objectives
 
-Help aspiring analysts align their skillsets with market demands.
+- Identify the most **in-demand technical skills** for Data Analyst roles in Atlanta.
+- Highlight the **top-paying job postings** and associated skills.
+- Understand **salary distributions** across companies and roles.
+- Help aspiring analysts align their learning with market demand.
 
-🧠 Data Sources
-job_postings_fact: Contains job posting details including title, location, and salary.
+---
 
-skills_dim, skills_job_dim: Define skills associated with each job.
+## ⚠️ Data Source
 
-company_dim: Contains company names and metadata.
+All data was collected in 2023 by **Luke Barousse** and is publicly available here:  
+🔗 https://www.lukebarousse.com/sql
 
-🛠️ SQL Queries Overview
-1. Top 10 In-Demand Skills for Data Analysts in Atlanta
-sql
-Copy
-Edit
-SELECT 
-    skills,
-    COUNT(skills_job_dim.job_id) AS demand_count
-...
-LIMIT 10;
-Purpose: Ranks skills by frequency in job postings.
+---
 
-Power BI Visual: Bar chart of top 10 skills by demand.
+## 🛠️ SQL Queries Summary
 
-2. Top Paying Data Analyst Jobs (with Skills)
-sql
-Copy
-Edit
-WITH top_paying_jobs AS (
-    SELECT ...
-)
-SELECT 
-    top_paying_jobs.*, skills
-...
-ORDER BY salary_year_avg DESC;
-Purpose: Merges job info with skill data to display high-paying roles.
+1. **Top 10 In-Demand Skills**
+   - Counts how often each skill appears in Atlanta-based Data Analyst postings.
+   - Visualized as a bar chart.
 
-Power BI Visual: Table of top salaries with associated skillsets.
+2. **Top Paying Roles with Skills**
+   - Retrieves the highest-paying jobs and maps them to their listed skills.
+   - Visualized in a table with salary and company name.
 
-3. General Salary Overview
-sql
-Copy
-Edit
-SELECT
-    job_id,
-    job_title_short,
-    job_location,
-    salary_year_avg,
-    ...
-ORDER BY salary_year_avg DESC;
-Purpose: Retrieves and ranks salaries for all Data Analyst roles.
+3. **Salary Overview**
+   - Lists all Atlanta Data Analyst jobs with non-null salaries.
+   - Visualized as a distribution or ranked list.
 
-Power BI Visual: Boxplot or histogram for salary distribution.
+---
 
-📈 Power BI Dashboard Highlights
-Top Skills by Demand: A clear breakdown of the most requested skills like SQL, Excel, Python, Tableau, etc.
+## 📈 Power BI Dashboard Highlights
 
-Salary Explorer: Interactive table for top-paying jobs and employers.
+- Skill demand bar chart
+- Top-paying job table with skill tags
+- Salary distribution visual
+- Filters for title, location, and skill
 
-Skill–Salary Mapping: See what skills are common among higher-paying roles.
+---
 
-Location Filter: All visuals filtered for Atlanta, GA.
+## 💡 Insights
 
-💡 Key Insights
-💼 SQL, Excel, and Python dominate the skill requirements.
+- SQL, Excel, Python, and Tableau are top skills in demand.
+- High-paying roles tend to require multiple advanced tools.
+- Salaries vary widely across companies and industries.
 
-🏢 Top-paying companies include well-known firms in tech, consulting, and finance.
+---
 
-💰 Salaries for Data Analyst roles in Atlanta vary significantly, often depending on skillset and company.
+## 👨‍💻 Author
 
-
-👨‍💻 Author
-Aiman Sharma
-Undergraduate Industrial Engineering Student @ Georgia Tech
-Interested in Data Analytics, Operations Research, and Supply Chain
-GitHub: aimansharma-gg
-
+**Aiman Sharma**  
+Industrial Engineering Undergrad @ Georgia Tech  
+Focused on Data Analytics, Operations Research, and Supply Chain  
+GitHub: [aimansharma-gg](https://github.com/aimansharma-gg)
