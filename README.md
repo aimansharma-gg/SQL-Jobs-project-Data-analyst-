@@ -2,6 +2,15 @@
 
 This project explores the Data Analyst job market in **Atlanta, GA** using real-world job posting data from **2023**, originally collected by [Luke Barousse](https://www.lukebarousse.com/sql). The goal was to extract actionable insights about which skills are most in demand, what salaries analysts can expect, and which companies offer the highest-paying opportunities.
 
+## 📦 Why CSV Files Aren’t Included
+
+The original CSV files used for this project — `job_postings_fact.csv`, `skills_dim.csv`, and `skills_job_dim.csv` — were not uploaded here due to **large file sizes**. Some of these files contain **hundreds of thousands of rows**, making them impractical to host directly in this repository.
+
+If you’d like to access the full dataset, you can download it directly from the original source, provided by Luke Barousse:
+
+🔗 [https://www.lukebarousse.com/sql](https://www.lukebarousse.com/sql)
+
+From there, you can import the CSVs into a database (e.g., PostgreSQL, SQLite) and run the SQL queries included in this project.
 ---
 
 ## 📁 Files
